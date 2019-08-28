@@ -9,9 +9,23 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
     margin: .5rem 1rem 0 0;
 }
 
+.card-header {
+    border: 0;
+    padding: 0;
+}
+
 .list-group-item {
-    padding: 10px 0 0 0;
-    border: none !important 
+   border: none;
+   padding: 10px 0 0 0;
+}
+
+.list-header {
+    text-align: center;
+    color: white;
+    background-color: #33cc99;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    padding: 10px 0 10px 0; 
 }
 
 .skills-card {
@@ -19,9 +33,9 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
     padding-bottom: 10px;
 }
 
-.card-header {
-    background-color: white;
-    padding: 10px 0; 
+.head-shot {
+    max-width: 75%;
+    height: auto;
 }
 
 
@@ -74,4 +88,5 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
     
   
 } 
+
 

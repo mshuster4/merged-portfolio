@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { MDBInput } from "mdbreact";
+import { MDBInput, MDBBtn } from "mdbreact";
 import { Row, Col } from "react-bootstrap"
+import axios from 'axios';
+import Button from "../../components/Button"
 
 
 class ContactForm extends Component {
@@ -10,27 +12,55 @@ class ContactForm extends Component {
     this.state = {
         name: "",
         email: "",
-        message: "",
-        mailSent: false,
-        error: null
+        message: ""
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput = e => {
+  handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     })
   }
 
-  handleFormSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state)
+      const name = this.state.name;
+      const email = this.state.email;
+      const message = this.state.message;
+      console.log(name, email, message)
+        axios({
+            method: "POST", 
+            url:"http://localhost:3001/send", 
+            data: {
+                name: name,   
+                email: email,  
+                message: message
+            }
+        }).then((response)=>{
+            if (response.data.msg === 'success'){
+                alert("Message Sent."); 
+                this.resetForm()
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+
 };
+
+ resetForm() {
+   this.setState({
+        name: "",
+        email: "",
+        message: ""
+   })
+ };
 
 
   render() {
         return(
-          <form>
+          <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
             <MDBInput
               label="Name"
               icon="user"
@@ -41,7 +71,7 @@ class ContactForm extends Component {
               success="right"
               name="name"
               value={this.state.name}
-              onInput={this.handleInput}
+              onChange={this.handleChange}
             />
             <MDBInput
               label="Email"
@@ -53,7 +83,7 @@ class ContactForm extends Component {
               success="right"
               name="email"
               value={this.state.email}
-              onInput={this.handleInput}
+              onChange={this.handleChange}
             />
             <MDBInput
               type="textarea"
@@ -62,7 +92,11 @@ class ContactForm extends Component {
               icon="pencil-alt"
               name="message"
               value={this.state.message}
-              onInput={this.handleInput}/>
+              onChange={this.handleChange}
+              />
+              <div>
+                <MDBBtn type="submit" outline={true} value="submit" className="send-button">Send</MDBBtn>
+              </div>
           </form>
         );
     }
