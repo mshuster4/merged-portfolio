@@ -63,7 +63,6 @@ class ContactForm extends Component {
           <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
             <MDBInput
               label="Name"
-              icon="user"
               group
               type="text"
               validate
@@ -75,9 +74,8 @@ class ContactForm extends Component {
             />
             <MDBInput
               label="Email"
-              icon="envelope"
               group
-              type="email"
+              type="text"
               validate
               error="wrong"
               success="right"
@@ -89,7 +87,6 @@ class ContactForm extends Component {
               type="textarea"
               rows="2"
               label="Message"
-              icon="pencil-alt"
               name="message"
               value={this.state.message}
               onChange={this.handleChange}

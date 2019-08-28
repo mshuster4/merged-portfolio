@@ -11,38 +11,20 @@ button.btn.btn-default.Ripple-parent.contact-button {
     display: flex;
 }
 
-@media only screen and (min-width: 320px) {
-   
-
+.md-form input[type=text]:focus:not([readonly]) + label {
+    color: #31cb97 !important; 
 }
 
-@media only screen and (min-width: 600px) {
-   
+.md-form input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #31cb97 !important;
+    box-shadow: 0 1px 0 0 #31cb97 !important; 
 }
 
-
-
-@media only screen and (min-width: 768px) {
-
-    
-
+.md-form textarea.md-textarea:focus:not([readonly]) + label {
+    color: green !important; 
 }
 
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
-and (orientation : portrait) { 
-
-   
-
+.md-form textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #31cb97 !important;
+    box-shadow: 0 1px 0 0 #31cb97 !important; 
 }
-
-
-@media only screen and (min-width: 992px) {
-    .contact-container {
-        min-height: 85vh;
-        flex-direction: column;
-        justify-content: center;
-        display: flex;
-    }
-} 

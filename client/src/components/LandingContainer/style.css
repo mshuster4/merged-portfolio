@@ -42,7 +42,7 @@
 
 
 .accent-color {
-    color: #33cc99;
+    color: #31cb97;
 }
 
 a.landing-link {
@@ -56,7 +56,7 @@ a.landing-link {
 
 button.btn.btn-outline-default.Ripple-parent.landing-botton {
     border-color: white !important;
-    color: #33cc99 !important;
+    color: #31cb97 !important;
     margin: 0;
     padding: 10px 15px 10px 15px;
 }
