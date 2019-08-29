@@ -2,6 +2,25 @@
     bottom: 0;
     color: #fff;
     width: 100%;
+    background-color: #f3f3f3;
+}
+
+.social-buttons {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn .fab {
+    font-size: 2rem;
+}
+
+footer.page-footer .footer-copyright {
+    color: white;
+    background-color: black;
 }
 
 @media only screen and (min-width: 320px) {

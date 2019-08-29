@@ -2,19 +2,21 @@ import React from "react";
 import { MDBContainer, MDBFooter } from "mdbreact";
 import { Row, Col } from "react-bootstrap"
 import Icon from "../Icon";
-import Button from "../Button";
+import { MDBBtn, MDBIcon } from "mdbreact";
 import "./style.css";
 
 const Footer = () => {
   return (
-    <MDBFooter color="black" className="font-small pt-4 footer">
+    <MDBFooter className="font-small footer">
       <MDBContainer fluid className="text-center">
          <Row>
             <Col sm={12}>
-                <Button className="contact-button"><Icon icon={["fab", "github-square"]} size="4x"/></Button>
-                <Button className="contact-button"><Icon icon={["fab", "linkedin"]} size="4x"/></Button>
-                <Button className="contact-button"><Icon icon={["fab", "facebook-square"]} size="4x"/></Button>
-                <Button className="contact-button"><Icon icon={["fab", "instagram"]} size="4x"/></Button>
+              <div className="social-buttons">
+                <MDBBtn floating outline={true} href="..." target="_blank"  className="contact-button"><MDBIcon fab icon="github"/></MDBBtn>
+                <MDBBtn floating outline={true} href="..." target="_blank" className="contact-button"><MDBIcon fab icon="facebook-f" /></MDBBtn>
+                <MDBBtn floating outline={true} href="..." target="_blank" className="contact-button"><MDBIcon fab icon="linkedin-in" /></MDBBtn>
+                <MDBBtn floating outline={true} href="..." target="_blank" className="contact-button"><MDBIcon fab icon="instagram"/></MDBBtn>
+              </div>
             </Col>
         </Row>
       </MDBContainer>

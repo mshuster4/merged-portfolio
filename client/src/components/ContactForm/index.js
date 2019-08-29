@@ -5,13 +5,14 @@ import * as EmailValidator from 'email-validator';
 
 class ContactForm extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
         name: "",
         email: "",
         message: ""
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,6 +22,7 @@ class ContactForm extends Component {
       [e.target.name]: e.target.value
     })
   }
+
 
   handleSubmit = e => {
     e.preventDefault();
@@ -79,6 +81,7 @@ class ContactForm extends Component {
               error="wrong"
               success="right"
               name="name"
+              autocomplete="off"
               value={this.state.name}
               onChange={this.handleChange}
               required
@@ -92,6 +95,7 @@ class ContactForm extends Component {
               validate
               error="wrong"
               success="right"
+              autocomplete="off"
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
@@ -104,6 +108,7 @@ class ContactForm extends Component {
               icon="pencil-alt"
               iconClassName="input-icon"
               name="message"
+              autocomplete="off"
               value={this.state.message}
               onChange={this.handleChange}
               required

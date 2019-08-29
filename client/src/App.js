@@ -54,7 +54,6 @@ library.add(
   faPenNib
 );
 
-
 class App extends Component {
 
   constructor(props) {
@@ -80,6 +79,7 @@ class App extends Component {
     this.onCloseModal.bind(this);
     this.handleSetActive.bind(this)
   }
+
 
 handleSetActive = (to) => {
   console.log(to)
