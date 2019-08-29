@@ -13,6 +13,7 @@ button.btn.btn-default.Ripple-parent.contact-button {
 
 .md-form input[type=text]:focus:not([readonly]) + label {
     color: #31cb97 !important; 
+
 }
 
 .md-form input[type=text]:focus:not([readonly]) {
@@ -21,10 +22,27 @@ button.btn.btn-default.Ripple-parent.contact-button {
 }
 
 .md-form textarea.md-textarea:focus:not([readonly]) + label {
-    color: green !important; 
+    color: #31cb97  !important; 
+    
 }
 
 .md-form textarea.md-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #31cb97 !important;
     box-shadow: 0 1px 0 0 #31cb97 !important; 
 }
+
+.md-form textarea.md-textarea {
+    padding: 0.6rem 0 0.4rem 0;
+}
+
+
+.md-form label.active {
+    transform: translateY(-15px)translateX(-5px)scale(0.8);
+}
+
+
+button.btn.btn-outline-default.Ripple-parent.send-button { 
+    width: 25%;
+    margin-top: 2rem;
+}
+

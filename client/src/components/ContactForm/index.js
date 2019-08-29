@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { MDBInput, MDBBtn } from "mdbreact";
-import { Row, Col } from "react-bootstrap"
+import { MDBInput, MDBBtn, MDBIcon } from "mdbreact";
 import axios from 'axios';
-import Button from "../../components/Button"
-
+import * as EmailValidator from 'email-validator';
 
 class ContactForm extends Component {
 
@@ -29,23 +27,33 @@ class ContactForm extends Component {
       const name = this.state.name;
       const email = this.state.email;
       const message = this.state.message;
-      console.log(name, email, message)
-        axios({
-            method: "POST", 
-            url:"http://localhost:3001/send", 
-            data: {
-                name: name,   
-                email: email,  
-                message: message
-            }
-        }).then((response)=>{
-            if (response.data.msg === 'success'){
-                alert("Message Sent."); 
-                this.resetForm()
-            }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
-            }
+      const isValid = EmailValidator.validate(this.state.email);
+
+      if (isValid === true) {
+        console.log(name, email, message);
+        console.log(isValid)
+          axios({
+              method: "POST", 
+              url:"http://localhost:3001/send", 
+              data: {
+                  name: name,   
+                  email: email,  
+                  message: message
+              }
+          }).then((response)=>{
+              if (response.data.msg === 'success'){
+                  alert("Message Sent."); 
+                  this.resetForm()
+              }else if(response.data.msg === 'fail'){
+                  alert("Message failed to send.")
+              }
         })
+      }
+
+     else { 
+          alert("Please enter a valid e-mail address.")
+
+      }
 
 };
 
@@ -60,9 +68,11 @@ class ContactForm extends Component {
 
   render() {
         return(
-          <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
+          <form className="form-group" id="contact-form" onSubmit={this.handleSubmit} method="POST">
             <MDBInput
               label="Name"
+              icon="user"
+              iconClassName="input-icon"
               group
               type="text"
               validate
@@ -71,9 +81,12 @@ class ContactForm extends Component {
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
+              required
             />
             <MDBInput
               label="Email"
+              icon="envelope"
+              iconClassName="input-icon"
               group
               type="text"
               validate
@@ -82,18 +95,23 @@ class ContactForm extends Component {
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
+              required
             />
             <MDBInput
               type="textarea"
-              rows="2"
+              rows="3"
               label="Message"
+              icon="pencil-alt"
+              iconClassName="input-icon"
               name="message"
               value={this.state.message}
               onChange={this.handleChange}
+              required
               />
-              <div>
-                <MDBBtn type="submit" outline={true} value="submit" className="send-button">Send</MDBBtn>
-              </div>
+      
+            <div className="d-flex justify-content-center">
+              <MDBBtn type="submit" outline={true} value="submit" className="send-button">Send <MDBIcon icon="paper-plane" /></MDBBtn>
+            </div>
           </form>
         );
     }
