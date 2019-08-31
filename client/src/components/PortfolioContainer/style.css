@@ -61,19 +61,9 @@ button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button:hover {
 }
 
 
-
-p {
-    font-size:  smaller;
-}
-
-
 .list-header {
     font-size: 1.5rem;
     margin-bottom: 0;
-}
-
-.modal-list {
-    font-size: smaller;
 }
 
 li {

@@ -8,7 +8,7 @@ function DevelopmentSkills() {
         <div className="skills-list">
             <Card className="text-center skills-card"> 
                 <Card.Header>
-                  <h5 className="list-header"><b> Development Skills </b><Icon icon={["fas", "code"]}></Icon></h5>
+                  <h5 className="list-header"><b> Development Skills </b></h5>
                 </Card.Header>
                     <ListGroup className="about-list" variant="flush">
                         <ListGroup.Item>HTML/CSS</ListGroup.Item>

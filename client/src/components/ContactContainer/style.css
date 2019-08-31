@@ -1,5 +1,5 @@
 a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
-    background-color: white !important ;
+    background-color: black !important ;
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -9,7 +9,7 @@ a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
     padding: 0 !important;
 }
 .contact-container {
-    min-height: 85vh;
+    min-height: 82vh;
     flex-direction: column;
     justify-content: center;
     display: flex;
@@ -47,7 +47,7 @@ a.btn-floating.btn.btn-outline-default.Ripple-parent.contact-button {
 
 button.btn.btn-outline-default.Ripple-parent.send-button { 
     width: 25%;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .grecaptcha-badge {

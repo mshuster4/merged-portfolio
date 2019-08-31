@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import AboutContainer from "../components/AboutContainer";
+import { Link } from 'react-scroll';
 import PageCard from "../components/PageCard";
 import AboutText from "../components/AboutText";
 import ScrollAnimation from 'react-animate-on-scroll';
-import Button from "../components/Button";
+import Resume from "../assets/resume/Marguerite-Shuster-Resume.pdf"
+import { MDBBtn } from "mdbreact";
 import AboutImage from "../components/AboutImage"
 import DevelopmentSkills from "../components/DevelopmentSkills";
 import DesignSkills from "../components/DesignSkills"
@@ -24,20 +26,30 @@ class About extends Component {
                         </Col>
                         <Col sm={12} md={7} lg={6}>
                           <AboutText></AboutText>
-                          <Button
+                          <MDBBtn
+                            tag="a"
+                            href={Resume}
+                            target="_blank"
                             outline={true}
                             className="about-button"
                             color="black"
                           >
                             View Resume
-                          </Button>
-                          <Button
+                          </MDBBtn>
+                        <Link
+                          to="contact" spy={true} 
+                          smooth={true}
+                          offset={20}
+                          duraton={500}
+                        >
+                          <MDBBtn
                             outline={true}
                             className="about-button"
                             color="black"
                           >
                             Say Hello
-                          </Button>
+                          </MDBBtn>
+                        </Link>
                         </Col>
                         <Col lg={1}></Col>
                       </Row>

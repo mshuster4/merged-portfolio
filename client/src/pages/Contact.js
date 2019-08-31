@@ -4,7 +4,6 @@ import ContactForm from "../components/ContactForm";
 import ContactContainer from "../components/ContactContainer";
 import Footer from "../components/Footer"
 import Icon from "../components/Icon";
-import Button from "../components/Button"
 import { Row, Col } from "react-bootstrap";
 
 class Contact extends Component {

@@ -36,7 +36,8 @@ import {
   faBookOpen,
   faArrowDown,
   faCode,
-  faPenNib
+  faPenNib,
+  faComment
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -51,7 +52,8 @@ library.add(
   faBookOpen,
   faArrowDown,
   faCode,
-  faPenNib
+  faPenNib,
+  faComment
 );
 
 class App extends Component {

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import ScrollAnimation from 'react-animate-on-scroll';
 import LandingContainer from "../components/LandingContainer";
 import LandingImg from "../components/LandingImg";
-import Button from "../components/Button";
-import Icon from "../components/Icon";
+import { MDBBtn } from "mdbreact";
+import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 
 class Landing extends Component {
@@ -19,11 +19,16 @@ class Landing extends Component {
                             <h1 className="h1-responsive">I am a <span className="accent-color">Web Developer</span> and <span className="accent-color"> UI Designer</span>.</h1>
                         </div>
                         <div className="button-container">
-                            <a href="#portfolio" className="landing-link" data-menuanchor="landing">
-                                <Button className="landing-botton" outline={true}>
+                            <Link
+                               to="portfolio" spy={true} 
+                               smooth={true}
+                               offset={-30}
+                               duraton={500}
+                            >
+                                <MDBBtn className="landing-botton" outline={true}>
                                     View My Creations 
-                                </Button>
-                            </a>
+                                </MDBBtn>
+                            </Link>
                         </div>
                     </div>
                  </LandingImg>

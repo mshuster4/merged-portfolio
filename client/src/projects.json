@@ -13,7 +13,7 @@
         "title": "Reading Wishlist",
         "tagline": "Search engine for discovering and saving books",
         "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
-        "techsUsed": ["HTML", "CSS", "Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"],
+        "techsUsed": ["HTML", "CSS", "Bootstrap", "React.js", "Node.js", "MongoDB", "Express.js", "Heroku (deployment)"],
         "github": "https://github.com/mshuster4/Book-Search-React",
         "demo": "https://rocky-cliffs-93730.herokuapp.com/"
 
