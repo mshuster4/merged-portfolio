@@ -49,8 +49,8 @@ a.btn.btn-outline-black.Ripple-parent.about-button {
 
 @media only screen and (min-width: 320px) {
     .about-container {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        padding-top:4rem;
+        padding-bottom: 4rem;
         overflow: auto;
         text-align: center;
     }
@@ -69,10 +69,8 @@ a.btn.btn-outline-black.Ripple-parent.about-button {
 
 @media only screen and (min-width: 768px) {
     .about-container {
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         overflow: auto;
         text-align: left;
     }

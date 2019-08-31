@@ -15,7 +15,8 @@ html, body {
 }
 
 .contact-page {
-   min-height: 100vh;
+   min-height: 100%;
+   background-color: white;
 }
 
 .nav-bg-1 {

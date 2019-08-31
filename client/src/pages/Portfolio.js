@@ -90,7 +90,7 @@ class Portfolio extends Component {
                  </ScrollAnimation>
                 </Col>
 
-                <Col xs={12} md={6} lg={4}>
+                <Col xs={12} md={6} lg={4} className="mb-4 md-mb-0">
                   <ScrollAnimation animateIn="fadeIn">  
                     <PortfolioImage
                         img={campPreview}
@@ -110,7 +110,7 @@ class Portfolio extends Component {
                  </ScrollAnimation>
                 </Col>
 
-                <Col xs={12} md={6} lg={4}>
+                <Col xs={12} md={6} lg={4} className="mb-4 mb-md-0">
                   <ScrollAnimation animateIn="fadeIn">  
                   <PortfolioImage
                       img={brewsPreview}
